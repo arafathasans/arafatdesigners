@@ -1,0 +1,1074 @@
+/*
+Theme Name: ARAFATHASAN
+Theme URI: 
+Author: Creta Themes
+Author URI: https://www.cretathemes.com/
+Description: The FSE Business WordPress theme is a powerful and versatile theme designed specifically for businesses of all sizes. It harnesses the latest features of WordPress, including full site editing capabilities, to provide a comprehensive and customizable solution for building professional websites.With FSE, you have complete control over the design and layout of your website. It utilizes the block-based editing system of WordPress, allowing you to easily create and modify content using a wide range of blocks such as text, images, videos, galleries, and more. You can arrange these blocks in any order, adjust their sizes, and customize their styles to create a unique and visually appealing website.One of the key features of FSE is its ability to edit not just individual pages, but the entire site. You can easily customize the header, footer, sidebar, and other global elements across all pages, ensuring consistency and branding throughout your website. This flexibility empowers you to create a cohesive and professional online presence that aligns with your business objectives.FSE also integrates seamlessly with popular WordPress plugins, giving you access to a vast ecosystem of additional features and functionalities. Whether you need advanced SEO optimization, social media integration, e-commerce capabilities, or contact forms, you can enhance your website's functionality with ease.Furthermore, the theme is optimized for performance and responsiveness, ensuring that your website looks great and functions flawlessly on any device or screen size. It follows the best coding practices and is regularly updated to ensure compatibility with the latest WordPress version and security standards.
+Requires at least: 5.9
+Tested up to: 6.2
+Requires PHP: 5.6
+Version: 1.0.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ARAFATHASAN
+Tags: blog, portfolio, photography, one-column, two-columns, left-sidebar, right-sidebar, block-patterns, block-styles, custom-background, custom-logo, custom-menu, custom-colors, custom-header, featured-images, footer-widgets, full-site-editing, full-width-template, sticky-post, threaded-comments, template-editing, wide-blocks, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+FSE Business is based on Catch Bells WordPress Theme, 2012-2023
+Catch Bells is distributed under the terms of the GNU GPL.
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@400;500;600;700&family=Foldit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700&family=Nabla&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=REM:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Import Bootstrap CSS */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css');
+
+/* CSS Reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, table, tr, th, td, tbody, thead, tfoot, form, fieldset, input, textarea, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+.header-top {
+  background-color: #f9f9f9;
+  padding: 10px 0;
+}
+
+.header-top .header-top-socials a {
+  color: #1246f1;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.header-top .header-top-info a {
+  color: #333;
+  margin-right: 10px;
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #333;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #555;
+}
+
+/* Main Section Styles */
+section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.section-content {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  padding: 30px 0;
+  color: #fff;
+}
+
+.footer-links a {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.footer-links a:hover {
+  color: #aaa;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-top .header-top-info {
+    margin-top: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+}
+
+/* Responsive and Dynamic Hover Styles */
+@media (min-width: 992px) {
+  .navbar-nav .nav-item:hover .nav-link {
+    color: #555;
+  }
+
+  .navbar-nav .nav-item.active .nav-link {
+    color: #555;
+    font-weight: bold;
+  }
+
+  .navbar-toggler:hover,
+  .navbar-toggler:focus {
+    color: #555;
+  }
+}
+/* Custom CSS for the responsive navbar and search bar */
+.navigation {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-family: 'PT Serif', serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar-brand span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.nav-item.active .nav-link {
+  color: #007bff;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  .navbar-expand-lg .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+}
+
+
+
+/* Carousel CSS */
+#header-carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-caption h6 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.carousel-caption h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.carousel-caption a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-caption h6 {
+    font-size: 14px;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 30px;
+  }
+  
+  .carousel-caption a {
+    font-size: 16px;
+  }
+  
+  .carousel-caption {
+    top: 40%;
+  }
+}
+
+/* Animations */
+.animated {
+  animation-duration: 1s;
+}
+
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+}
+
+/* Additional Styling */
+.container-fluid {
+  padding: 0;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-5 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Add more CSS styles as needed */
+
+/* Example: Center the carousel caption on larger screens */
+@media (min-width: 992px) {
+  .carousel-caption {
+    top: 50%;
+  }
+}
+
+
+
+
+
+/* Styles for the services section */
+.service-item {
+  transition: transform 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item img {
+  max-width: 80px;
+}
+
+.service-item h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+.service-item a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.service-item a i {
+  margin-left: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .service-item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-item {
+    padding: 20px;
+  }
+  
+  .service-item img {
+    max-width: 60px;
+  }
+  
+  .service-item h5 {
+    font-size: 16px;
+  }
+  
+  .service-item p {
+    font-size: 12px;
+  }
+  
+  .service-item a {
+    font-size: 12px;
+  }
+}
+/* Style the service item container */
+.service-item {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the service item image */
+.service-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the service item title */
+.service-item h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Style the service item description */
+.service-item p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Style the read more link */
+.service-item a {
+  display: inline-block;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+/* Style the read more link icon */
+.service-item a i {
+  margin-left: 5px;
+}
+
+/* Add padding between the service items */
+.row.g-4 [class^="col"] {
+  padding-bottom: 20px;
+}
+
+
+/* Styles for the portfolio section */
+.portfolio {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-head h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.section-head p {
+  color: #666;
+}
+
+.mainContainer {
+  text-align: center;
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button.active {
+  background-color: #555;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+/* Custom styles for the skills section */
+.skills_container {
+  margin-top: 40px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.progress-line {
+  position: relative;
+  flex: 3;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.progress-line span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+/* Custom media queries for responsiveness */
+@media (max-width: 767px) {
+  .row.g-5.align-items-center {
+    flex-direction: column;
+  }
+
+  .col-lg-6 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+/* Continue from the previous CSS code */
+
+/* Custom media queries for further responsiveness */
+@media (max-width: 991px) {
+  .container.skills_container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 575px) {
+  .progress-line {
+    flex: 2;
+  }
+}
+
+/* Adjustments for extra small screens */
+@media (max-width: 400px) {
+  .progress-line {
+    flex: 1;
+  }
+}
+
+
+
+
+
+
+/* Projects Section */
+.projects {
+  padding: 80px 0;
+}
+
+.projects .section-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projects .section-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.projects .section-header h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #1dc8cd;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.projects .section-header p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+.projects .portfolio-flters {
+  padding: 0;
+  margin: 30px 0 40px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.projects .portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #777;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-flters li:hover,
+.projects .portfolio-flters li.filter-active {
+  color: #1dc8cd;
+}
+
+.projects .portfolio-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.projects .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-item:hover .portfolio-info {
+  bottom: 0;
+}
+
+.projects .portfolio-item .portfolio-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects .portfolio-item .img-fluid {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-item .portfolio-info {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  background: rgba(29, 200, 205, 0.9);
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.projects .portfolio-item .portfolio-info p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.projects .portfolio-item .portfolio-info a {
+  color: #fff;
+  font-size: 24px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.projects .portfolio-item .portfolio-info a:hover {
+  color: #1dc8cd;
+}
+
+/* Responsive Layout */
+@media (max-width: 767px) {
+  .projects .portfolio-flters li {
+    font-size: 14px;
+  }
+}
+/* Search bar and body styles */
+#searchInput {
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-right: 10px;
+  width: 200px;
+  color: #333;
+}
+
+#searchInput::placeholder {
+  color: #888;
+}
+
+#searchBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+#searchBtn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Course section styles */
+.section.courses {
+  padding: 80px 0;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.section-title .h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.section-title .content-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 15px;
+  color: #333;
+}
+
+.course-card {
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.course-card:hover {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.course-card .card-body {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.course-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+}
+
+.course-description {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.btn-small {
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-solid-border {
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn-small:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title .content-title {
+    font-size: 28px;
+  }
+
+  .course-title {
+    font-size: 20px;
+  }
+
+  .course-description {
+    font-size: 13px;
+  }
+
+  .btn-small {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title .content-title {
+    font-size: 24px;
+  }
+
+  .course-title {
+    font-size: 18px;
+  }
+
+  .course-description {
+    font-size: 12px;
+  }
+
+  .btn-small {
+    padding: 4px 12px;
+    font-size: 11px;
+  }
+}
+
+
+
+
+/*** Testimonial ***/
+.testimonial {
+  background: linear-gradient(rgba(136, 180, 78, .85), rgba(136, 180, 78, .85)), url(img/testimonial-bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.testimonial-item {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  background: #FFFFFF;
+  border: 30px solid var(--primary);
+}
+
+.testimonial-item img {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 60px;
+}
+
+.testimonial-carousel .owl-dots {
+  margin-top: 35px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--primary);
+  border-radius: 15px;
+  transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+  width: 30px;
+  background: var(--dark);
+}
+/* Testimonial Styles */
+.testimonial {
+  background-color: #f7f7f7;
+  padding: 80px 0;
+}
+
+.testimonial .section-title {
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.testimonial-carousel {
+  position: relative;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.testimonial-item h5 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.testimonial-item .text-primary {
+  color: #007bff;
+}
+
+.testimonial-item img {
+  max-width: 80px;
+  border-radius: 50%;
+}
+
+/* Owl Carousel Styles */
+.owl-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.owl-carousel .testimonial-item {
+  flex: 0 0 100%;
+  margin-right: 15px;
+}
+
+/* Animation */
+@keyframes testimonialAnimation {
+  0% {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial .container {
+    padding: 0 20px;
+  }
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 576px) {
+  .testimonial .section-title h1 {
+    font-size: 24px;
+  }
+}
